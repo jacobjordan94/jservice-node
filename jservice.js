@@ -3,33 +3,45 @@ var qs = require('query-string');
 
 class jService{
 	constructor(){
-		this.url = 'http://jservice.io/api/'
+		this._url = 'http://jservice.io/api/'
 	}
 
-	_makeRequest(){
+	_makeRequest(url, callback){
+		url = this._url + url;
+		request(url, function(err, response, json){
+			callback(err, response, JSON.parse(json));
+		});
+	}	
 
-	}
-
-	clues(){
-
+	clues(options, callback){
+		var url = 'clues?' + qs.stringify(options);
+		this._makeRequest(url, callback);
 	}
 
 	random(count, callback){
-		var url = 
 		count = count || 100;
 		count = count > 100 ? 100 : count;
-
+		var url = 'random?' + qs.stringify({'count' : count});
+		this._makeRequest(url, callback);
 	}
 
-	categories(){
-
+	categories(options, callback){	
+		options.count = count || 100; 
+		options.count = count > 100 ? 100 : count;
+		var url = 'categories?' + qs.stringify(options);
+		this._makeRequest(url, callback);
 	}
 
-	category(){
-
+	category(id, callback){
+		var url = 'category?' + qs.stringify({'id' : id});
+		this._makeRequest(url, callback);
 	}
 
-	invalid(){
-
+	invalid(id, callback){
+		var url = 'invalid?' + qs.stringify({'id' : id});
+		this._makeRequest(url, callback);
 	}
 }
+
+var js = new jService();
+module.exports = js;
