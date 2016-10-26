@@ -1,6 +1,6 @@
 {
   "name": "jservice-node",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Node wrapper for accessing the jservice.io API",
   "main": "jservice.js",
   "scripts": {
@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/jacobjordan94/jservice-node/issues"
   },
-  "homepage": "https://github.com/jacobjordan94/jservice-node#readme"
+  "homepage": "https://github.com/jacobjordan94/jservice-node#readme",
+  "dependencies": {
+    "request": "latest",
+    "query-string": "latest"
+  }
 }
