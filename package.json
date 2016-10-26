@@ -1,0 +1,27 @@
+{
+  "name": "jservice-node",
+  "version": "0.1.0",
+  "description": "Node wrapper for accessing the jservice.io API",
+  "main": "jservice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobjordan94/jservice-node.git"
+  },
+  "keywords": [
+    "jservice",
+    "jeopardy",
+    "jservice.io",
+    "alex",
+    "trebek",
+    "jservice-node"
+  ],
+  "author": "@JacobAJordan_",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobjordan94/jservice-node/issues"
+  },
+  "homepage": "https://github.com/jacobjordan94/jservice-node#readme"
+}
