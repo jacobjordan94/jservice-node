@@ -26,8 +26,8 @@ class jService{
 	}
 
 	categories(options, callback){	
-		options.count = count || 100; 
-		options.count = count > 100 ? 100 : count;
+		options.count = options.count || 100; 
+		options.count = options.count > 100 ? 100 : options.count;
 		var url = 'categories?' + qs.stringify(options);
 		this._makeRequest(url, callback);
 	}
