@@ -1,6 +1,6 @@
 {
   "name": "jservice-node",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Node wrapper for accessing the jservice.io API",
   "main": "jservice.js",
   "scripts": {
